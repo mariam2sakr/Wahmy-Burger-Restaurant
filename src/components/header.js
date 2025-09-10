@@ -72,7 +72,7 @@ function Header({ cart, setShowCart }) {
   return (
     <div className="header">
       <div className="header-left">
-        <img src="/images/logo-header.png" className="logo" alt="logo" />
+        <img src={`${process.env.PUBLIC_URL}/images/logo-header.png`} className="logo" alt="logo" />
         <span className="h-header">WAHMY</span>
       </div>
 

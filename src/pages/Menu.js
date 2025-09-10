@@ -5,19 +5,16 @@ function Menu({ addToCart }) {
   const [beefItems, setBeefItems] = useState([]);
   const [chickenItems, setChickenItems] = useState([]);
 
-  useEffect(() => {
-    // beef
-    fetch("http://localhost:5000/beef")
+   useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/db.json`)
       .then((res) => res.json())
-      .then((data) => setBeefItems(data))
-      .catch((err) => console.error("Error fetching beef:", err));
-
-    // chicken
-    fetch("http://localhost:5000/chicken")
-      .then((res) => res.json())
-      .then((data) => setChickenItems(data))
-      .catch((err) => console.error("Error fetching chicken:", err));
+      .then((data) => {
+        setBeefItems(data.beef || []);
+        setChickenItems(data.chicken || []);
+      })
+      .catch((err) => console.error("Error fetching data:", err));
   }, []);
+
 
   return (
     <div id="MENU">
@@ -28,7 +25,7 @@ function Menu({ addToCart }) {
           {beefItems.map((item) => (
             <div className="menu-card" key={item.id}>
               <img
-                src={`http://localhost:3000${item.img}`}
+                src={`${process.env.PUBLIC_URL}${item.img}`}
                 alt={item.name}
                 className="menu-img"
               />
@@ -44,7 +41,7 @@ function Menu({ addToCart }) {
           {beefItems.map((item) => (
             <div className="menu-card" key={item.id + "-copy"}>
               <img
-                src={`http://localhost:3000${item.img}`}
+                src={`${process.env.PUBLIC_URL}${item.img}`}
                 alt={item.name}
                 className="menu-img"
               />
@@ -67,7 +64,7 @@ function Menu({ addToCart }) {
           {chickenItems.map((item) => (
             <div className="menu-card" key={item.id}>
               <img
-                src={`http://localhost:3000${item.img}`}
+                src={`${process.env.PUBLIC_URL}${item.img}`}
                 alt={item.name}
                 className="menu-img"
               />
@@ -83,7 +80,7 @@ function Menu({ addToCart }) {
           {chickenItems.map((item) => (
             <div className="menu-card" key={item.id + "-copy"}>
               <img
-                src={`http://localhost:3000${item.img}`}
+                 src={`${process.env.PUBLIC_URL}${item.img}`}
                 alt={item.name}
                 className="menu-img"
               />

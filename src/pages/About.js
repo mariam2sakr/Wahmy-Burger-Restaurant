@@ -11,7 +11,7 @@ function About(){
                 been passed down through generations and perfected <br></br> by our chefs to
                 deliver the best flavor in town.
             </span><br></br>
-            <img src="/images/flying-astronaut.png" alt="flying astronaut" className="img-footer"></img>
+            <img src={`${process.env.PUBLIC_URL}/images/flying-astronaut.png`} alt="flying astronaut" className="img-footer"></img>
             <p className="Rights"> &copy; All Rights Reserved by Wahmy Burger</p>
         </div>
     )
