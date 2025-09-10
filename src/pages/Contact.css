@@ -1,0 +1,81 @@
+#CONTACT{
+    width: 100%;
+    min-height: 100vh;
+    background-color: brown;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 100px 0px 50px 0px;
+}
+.left-div , .right-div{
+    width: 40%;
+    min-height: 400px;
+    color: bisque;
+    padding: 20px;
+}
+.right-div{
+    background-color: rgba(254, 245, 231, 0.44);
+    border-radius: 30px;
+}
+.h-contact{
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.info-contact li{
+    margin: 30px 0px;
+    font-size: 22px;
+}
+.info-contact li a{
+    margin-left: 10px;
+    color: bisque;
+}
+.icon{
+    margin-left: 10px;
+}
+label{
+    margin: 20px 0px 5px 0px;
+    font-weight: bold;
+}
+textarea{
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    resize: vertical;
+}
+.send{
+    padding: 8px 30px;
+    border-radius: 10px;
+    background-color: bisque;
+    margin: 10px auto;
+    transition: 0.3s;
+}
+.send:hover {
+    background-color: #ffe4b5;
+}
+@media(max-width:890px){
+#CONTACT{
+    flex-direction: column;
+    justify-content: center;
+}
+.left-div{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 0px 15px;
+}
+.right-div{
+    width: 90%;
+}
+.h-contact{
+    font-size: 45px;
+}
+.info-contact{
+    list-style-position: inside;
+}
+.info-contact li{
+    font-size: 18px;
+    margin-left: -20px;
+}
+}

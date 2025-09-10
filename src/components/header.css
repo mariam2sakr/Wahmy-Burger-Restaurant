@@ -1,0 +1,98 @@
+.header{
+    width: 100%;
+    height: 75px;
+    border-bottom: 2px solid bisque;
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 25px;
+    background-color: brown;
+    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.5)
+}
+.header-left{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 80px;
+    height: 75px;
+}
+.h-header{
+    color: bisque;
+    font-weight: bolder;
+    font-size: 35px;
+    line-height: 75px;
+    font-family: "Chicle", serif;
+    letter-spacing: 5px;
+}
+.header-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+select{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.fa-location-dot{
+    color: bisque;
+    font-size: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.fa-location-dot:hover{
+    transform: scale(1.2);
+}
+.View{
+    width: 150px;
+    height: 40px;
+    background-color: rgba(83, 77, 77, 0.371);
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: bisque;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.View i{
+    margin-right: 10px;
+}
+.View:hover{
+    transform: scale(.95);
+    background-color: bisque;
+    color: brown;
+}
+@media(max-width:450px){
+.header{
+    padding:0px 10px;
+}
+.logo{
+    width: 65px;
+    height: 70px;
+}
+.h-header{
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+select{
+    display: none;
+}
+.fa-location-dot{
+    margin-right: 5px !important;
+}
+.View{
+    width: 130px;
+}
+.View span{
+    font-size: 12px;
+}
+.View i{
+    font-size: 13px;
+    margin-right: 5px;
+}
+}

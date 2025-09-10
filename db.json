@@ -1,0 +1,91 @@
+{
+  "beef": [
+    {
+      "id": "1",
+      "name": "Cheese Burger",
+      "price": "150 EGP",
+      "img": "/images/burger1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Classic Burger",
+      "price": "145 EGP",
+      "img": "/images/burger2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Mushroom Burger",
+      "price": "180 EGP",
+      "img": "/images/burger3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Smoky Burger",
+      "price": "170 EGP",
+      "img": "/images/burger4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Spicy Burger",
+      "price": "190 EGP",
+      "img": "/images/burger5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Double Burger",
+      "price": "230 EGP",
+      "img": "/images/burger7.jpg"
+    },
+    {
+      "id": "7",
+      "name": "BBQ Burger",
+      "price": "195 EGP",
+      "img": "/images/burger8.jpg"
+    }
+  ],
+  "chicken": [
+    {
+      "id": "8",
+      "name": "Classic Burger",
+      "price": "120 EGP",
+      "img": "/images/chicken-burger1.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Crispy Burger",
+      "price": "130 EGP",
+      "img": "/images/chicken-burger2.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Spicy Burger",
+      "price": "180 EGP",
+      "img": "/images/chicken-burger3.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Garlic Herb Burger",
+      "price": "160 EGP",
+      "img": "/images/chicken-burger4.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Double Burger",
+      "price": "200 EGP",
+      "img": "/images/chicken-burger5.jpg"
+    },
+    {
+      "id": "13",
+      "name": "BBQ Burger",
+      "price": "170 EGP",
+      "img": "/images/chicken-burger6.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Cheese Burger",
+      "price": "140 EGP",
+      "img": "/images/chicken-burger7.jpg"
+    }
+  ],
+  "feedback": []
+}
