@@ -66,9 +66,18 @@ function App() {
   };
 
   const totalPrice = cart.reduce((total, item) => {
-    const price = parseFloat(item.price.replace("EGP", "").trim());
-    return total + price * item.quantity;
-  }, 0);
+  let price = item.price;
+
+  if (typeof price === "string") {
+    price = parseFloat(price.replace("EGP", "").trim());
+  } else if (typeof price === "number") {
+    price = price;
+  } else {
+    price = 0;
+  }
+
+  return total + price * item.quantity;
+}, 0);
 
   return (
     <div>

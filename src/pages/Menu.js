@@ -5,7 +5,7 @@ function Menu({ addToCart }) {
   const [beefItems, setBeefItems] = useState([]);
   const [chickenItems, setChickenItems] = useState([]);
 
-   useEffect(() => {
+  useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/db.json`)
       .then((res) => res.json())
       .then((data) => {
@@ -15,10 +15,32 @@ function Menu({ addToCart }) {
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
+  // 🟢 Auto Scroll
+  useEffect(() => {
+    const containers = document.querySelectorAll(".menu-container");
+
+    const intervals = Array.from(containers).map((container) => {
+      let scrollAmount = 0;
+      const step = 1; 
+      return setInterval(() => {
+        if (container) {
+          container.scrollLeft += step;
+          scrollAmount += step;
+
+          if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+            container.scrollLeft = 0;
+            scrollAmount = 0;
+          }
+        }
+      }, 25); // كل 30ms يتحرك خطوة صغيرة
+    });
+
+    return () => intervals.forEach((i) => clearInterval(i));
+  }, [beefItems, chickenItems]);
 
   return (
     <div id="MENU">
-       {/* Beef Section  */}
+      {/* Beef Section  */}
       <h3 className="h-menu">Beef Burger</h3>
       <div className="menu-container">
         <div className="menu-track">
@@ -60,7 +82,7 @@ function Menu({ addToCart }) {
       {/* Chicken Section */}
       <h3 className="h-menu">Chicken Burger</h3>
       <div className="menu-container">
-        <div className="menu-track2">
+        <div className="menu-track">
           {chickenItems.map((item) => (
             <div className="menu-card" key={item.id}>
               <img
@@ -80,7 +102,7 @@ function Menu({ addToCart }) {
           {chickenItems.map((item) => (
             <div className="menu-card" key={item.id + "-copy"}>
               <img
-                 src={`${process.env.PUBLIC_URL}${item.img}`}
+                src={`${process.env.PUBLIC_URL}${item.img}`}
                 alt={item.name}
                 className="menu-img"
               />
