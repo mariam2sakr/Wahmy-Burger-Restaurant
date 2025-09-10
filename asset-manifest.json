@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Wahmy-Burger-Restaurant/static/css/main.9e4799de.css",
+    "main.js": "/Wahmy-Burger-Restaurant/static/js/main.a3944dd5.js",
+    "static/js/453.a22d5ee7.chunk.js": "/Wahmy-Burger-Restaurant/static/js/453.a22d5ee7.chunk.js",
+    "index.html": "/Wahmy-Burger-Restaurant/index.html",
+    "main.9e4799de.css.map": "/Wahmy-Burger-Restaurant/static/css/main.9e4799de.css.map",
+    "main.a3944dd5.js.map": "/Wahmy-Burger-Restaurant/static/js/main.a3944dd5.js.map",
+    "453.a22d5ee7.chunk.js.map": "/Wahmy-Burger-Restaurant/static/js/453.a22d5ee7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e4799de.css",
+    "static/js/main.a3944dd5.js"
+  ]
+}
